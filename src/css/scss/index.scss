@@ -1,0 +1,35 @@
+@import "nullstyle";
+@import "_adaptate";
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: #272727;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.container {
+    max-width: em(1400);
+    // width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.header {
+    background: #474747;
+    // .header__container
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+    // .header__menu
+    &__menu {
+        width: 100%;
+        padding: rem(30) 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button {
+        background: transparent;
+    }
+}
