@@ -1,0 +1,198 @@
+@import "nullstyle";
+@import "_adaptate";
+.wrapper {
+    height: 100%;
+    width: 100%;
+    background: #272727;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.main-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    max-width: em(1400);
+    // width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.header {
+    background: #474747;
+    // .header__container
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+    // .header__menu
+    &__menu {
+        width: 100%;
+        padding: rem(30) 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__button {
+        background: transparent;
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+        min-width: 40%;
+    }
+    &__input {
+        width: 100%;
+        padding: 0 rem(20);
+        height: rem(40);
+        border-radius: rem(6);
+        font-size: rem(20);
+    }
+}
+
+.main {
+    flex: 1 1 auto;
+    &__composition {
+        transition: 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 25%;
+            height: 50%;
+            width: rem(3);
+            background: white;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 25%;
+            height: 50%;
+            width: rem(3);
+            background: white;
+        }
+    }
+    // .main__srlabel
+    &__srlabel {
+        width: 100%;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__properties {
+        flex: 1 1 30%;
+        display: flex;
+    }
+    &__car-photo {
+        flex: 0 1 60%;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__props {
+        flex: 0 1 80%;
+        font-size: rem(24);
+        margin: auto;
+        li {
+            &:first-child {
+                font-size: rem(36);
+                font-weight: 700;
+                margin-bottom: rem(10);
+            }
+            &:last-child {
+                margin-top: rem(10);
+            }
+        }
+    }
+    &__text {
+        font-size: rem(30);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__photo-atach {
+        width: rem(700);
+        height: rem(300);
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    &__counter {
+        margin-left: 30%;
+        font-size: rem(36);
+        span {
+            &:last-child {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+.nav-btns {
+    display: flex;
+    &__item {
+        cursor: pointer;
+        margin: 0 rem(10);
+        width: rem(30);
+        height: rem(30);
+        border: rem(3) solid white;
+        border-radius: 50%;
+        transition: scale 0.3s, transform 0.3s;
+        &:hover {
+            transform: translate(rem(0), rem(-5)) scale(1.1, 1.1);
+        }
+    }
+    &__item-active {
+        cursor: pointer;
+        margin: 0 rem(10);
+        width: rem(30);
+        height: rem(30);
+        background: white;
+        border: rem(3) solid white;
+        border-radius: 50%;
+        transition: scale 0.3s, transform 0.3s;
+        &:hover {
+            transform: translate(rem(0), rem(-5)) scale(1.1, 1.1);
+        }
+    }
+}
+
+.footer {
+    background: #474747;
+    &__menu-row {
+        padding: rem(20) 0;
+        font-size: rem(24);
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__menu-column {
+        width: 25%;
+    }
+    &__col {
+        .button {
+            background: transparent;
+            font-size: rem(20);
+            color: white;
+            border-radius: rem(7);
+            &:hover {
+                background: #272727;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+    }
+}

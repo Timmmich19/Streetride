@@ -1,0 +1,22 @@
+.error-page {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.error-page h1 {
+    font-size: 50px;
+}
+
+.error-page p {
+    margin: 30px 0 0 0;
+    font-size: 30px;
+}
+
+.error-page a {
+    color: aliceblue;
+}
+
+.error-page a:hover {
+    color: aquamarine;
+    text-decoration: underline;
+}
