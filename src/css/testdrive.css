@@ -97,11 +97,9 @@ h6 {
   color: white;
 }
 
-.gallery-page {
+.test-drive-page {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,7 +107,6 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #272727;
 }
 
 .container {
@@ -161,19 +158,25 @@ h6 {
   font-size: 1.25rem;
 }
 
-.gall {
+.test-drive {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  background: #272727;
 }
-.gall__srlabel {
+.test-drive h1 {
+  margin: 1.25rem;
+  font-size: 2.5rem;
+}
+.test-drive__center {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.gall__srlabel img {
-  max-width: 100%;
-}
-.gall__gallery {
+.test-drive__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,61 +184,20 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.gall__label {
-  width: 100%;
-  text-align: center;
-  font-size: 2.25rem;
-  font-weight: 700;
-  text-align: center;
+
+.form__item {
+  margin: 1.25rem 0;
 }
-.gall__rulet {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 1.875rem 0;
-}
-.gall__even-row {
-  margin: 0.625rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.gall__odd-row {
-  margin: 0.625rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.gall__even-gall-photo {
-  max-width: 24%;
-  padding: 1.25rem;
-  background: #474747;
+.form__input {
+  padding: 0 1.25rem;
+  height: 3.125rem;
+  width: 31.25rem;
   border-radius: 0.625rem;
-}
-.gall__even-gall-photo img {
-  max-width: 100%;
-  min-height: 100%;
-}
-.gall__odd-gall-photo {
-  max-width: 32%;
-  padding: 1.25rem;
-  background: #474747;
-  border-radius: 0.625rem;
-  min-height: 100%;
-}
-.gall__odd-gall-photo img {
-  max-width: 100%;
+  font-size: 1.25rem;
 }
 
 .footer {

@@ -7,12 +7,11 @@
     font-family: "Roboto", sans-serif;
     color: white;
 }
-.gallery-page {
+.map-page {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background: #272727;
 }
 .container {
     max-width: em(1400);
@@ -52,64 +51,10 @@
     }
 }
 
-.gall {
-    flex: 1 0 auto;
-    background: #272727;
-    &__srlabel {
-        width: 100%;
-        img {
-            max-width: 100%;
-        }
-    }
-    &__gallery {
-        display: flex;
-        flex-direction: column;
-    }
-    // .main__textprop
-    &__label {
-        width: 100%;
-        text-align: center;
-        font-size: rem(36);
-        font-weight: 700;
-        text-align: center;
-    }
-    &__rulet {
-        display: flex;
-        flex-direction: column;
-        margin: rem(30) 0;
-    }
-    &__even-row {
-        margin: rem(10) 0;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__odd-row {
-        margin: rem(10) 0;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__even-gall-photo {
-        max-width: 24%;
-        padding: rem(20);
-        background: #474747;
-        border-radius: rem(10);
-        img {
-            max-width: 100%;
-            min-height: 100%;
-        }
-    }
-    &__odd-gall-photo {
-        max-width: 32%;
-        padding: rem(20);
-        background: #474747;
-        border-radius: rem(10);
-        min-height: 100%;
-        img {
-            max-width: 100%;
-        }
-    }
+.map {
+    flex: 1 1 auto;
+    height: rem(860);
 }
-
 .footer {
     background: #474747;
     &__menu-row {
@@ -128,6 +73,9 @@
             font-size: rem(20);
             color: white;
             border-radius: rem(7);
+            a {
+                color: aliceblue;
+            }
             &:hover {
                 background: #272727;
             }

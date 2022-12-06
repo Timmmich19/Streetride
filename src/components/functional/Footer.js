@@ -8,7 +8,7 @@ function Footer() {
                     <div className="footer__menu-column">
                         <div className="footer__col">
                             <Button>2022 Mustang</Button>
-                            <Button>Gallery</Button>
+                            <Button href="/gallery">Gallery</Button>
                             <Button>Features</Button>
                             <Button>Catalog</Button>
                         </div>
@@ -25,7 +25,7 @@ function Footer() {
                         <div className="footer__col">
                             <Button>Ford Expiriense</Button>
                             <Button>Investmens</Button>
-                            <Button>Test-Drive</Button>
+                            <Button href="/testdrive">Test-Drive</Button>
                             <Button>About</Button>
                         </div>
                     </div>

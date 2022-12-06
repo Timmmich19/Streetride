@@ -7,12 +7,11 @@
     font-family: "Roboto", sans-serif;
     color: white;
 }
-.gallery-page {
+.test-drive-page {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background: #272727;
 }
 .container {
     max-width: em(1400);
@@ -52,64 +51,35 @@
     }
 }
 
-.gall {
+.test-drive {
     flex: 1 0 auto;
-    background: #272727;
-    &__srlabel {
-        width: 100%;
-        img {
-            max-width: 100%;
-        }
+    h1 {
+        margin: rem(20);
+        font-size: rem(40);
     }
-    &__gallery {
+    &__center {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__form {
         display: flex;
         flex-direction: column;
-    }
-    // .main__textprop
-    &__label {
-        width: 100%;
-        text-align: center;
-        font-size: rem(36);
-        font-weight: 700;
-        text-align: center;
-    }
-    &__rulet {
-        display: flex;
-        flex-direction: column;
-        margin: rem(30) 0;
-    }
-    &__even-row {
-        margin: rem(10) 0;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__odd-row {
-        margin: rem(10) 0;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__even-gall-photo {
-        max-width: 24%;
-        padding: rem(20);
-        background: #474747;
-        border-radius: rem(10);
-        img {
-            max-width: 100%;
-            min-height: 100%;
-        }
-    }
-    &__odd-gall-photo {
-        max-width: 32%;
-        padding: rem(20);
-        background: #474747;
-        border-radius: rem(10);
-        min-height: 100%;
-        img {
-            max-width: 100%;
-        }
+        align-items: center;
     }
 }
-
+.form {
+    &__item {
+        margin: rem(20) 0;
+    }
+    &__input {
+        padding: 0 rem(20);
+        height: rem(50);
+        width: rem(500);
+        border-radius: rem(10);
+        font-size: rem(20);
+    }
+}
 .footer {
     background: #474747;
     &__menu-row {
