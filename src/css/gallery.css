@@ -163,8 +163,8 @@ h6 {
 
 .gall {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   background: #272727;
 }
 .gall__srlabel {
@@ -218,6 +218,7 @@ h6 {
           justify-content: space-between;
 }
 .gall__even-gall-photo {
+  min-width: 1.875rem;
   max-width: 24%;
   padding: 1.25rem;
   background: #474747;
@@ -238,6 +239,29 @@ h6 {
   max-width: 100%;
 }
 
+@media (max-width: 500px) {
+  .gall__even-gall-photo {
+    min-width: 1.875rem;
+    max-width: 24%;
+    padding: 0.3125rem;
+    background: #474747;
+    border-radius: 0.625rem;
+  }
+  .gall__even-gall-photo img {
+    max-width: 100%;
+    min-height: 100%;
+  }
+  .gall__odd-gall-photo {
+    max-width: 32%;
+    padding: 0.3125rem;
+    background: #474747;
+    border-radius: 0.625rem;
+    min-height: 100%;
+  }
+  .gall__odd-gall-photo img {
+    max-width: 100%;
+  }
+}
 .footer {
   background: #474747;
 }

@@ -1,4 +1,4 @@
-import Composition from "../functional/Composition";
+import Composition from "./Composition";
 
 
 function MainSection() {

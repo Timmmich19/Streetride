@@ -53,7 +53,7 @@
 }
 
 .gall {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     background: #272727;
     &__srlabel {
         width: 100%;
@@ -89,6 +89,7 @@
         justify-content: space-between;
     }
     &__even-gall-photo {
+        min-width: rem(30);
         max-width: 24%;
         padding: rem(20);
         background: #474747;
@@ -106,6 +107,31 @@
         min-height: 100%;
         img {
             max-width: 100%;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .gall {
+        &__even-gall-photo {
+            min-width: rem(30);
+            max-width: 24%;
+            padding: rem(5);
+            background: #474747;
+            border-radius: rem(10);
+            img {
+                max-width: 100%;
+                min-height: 100%;
+            }
+        }
+        &__odd-gall-photo {
+            max-width: 32%;
+            padding: rem(5);
+            background: #474747;
+            border-radius: rem(10);
+            min-height: 100%;
+            img {
+                max-width: 100%;
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ const rows = [[3, 4, 5, 6], [7, 8, 9], [10, 11, 12, 13], [14, 15, 16]]
 export default function PhotoGrid() {
 
     return (
-        <div classNameName="gall">
+        <section classNameName="gall">
             <div className="gall__container container">
                 <div className="gall__srlabel">
                     <img src="/img/Street-Ride.svg" alt="StreetRide" />
@@ -32,6 +32,6 @@ export default function PhotoGrid() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

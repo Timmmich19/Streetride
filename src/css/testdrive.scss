@@ -52,7 +52,8 @@
 }
 
 .test-drive {
-    flex: 1 0 auto;
+    background: #272727;
+    flex: 1 1 auto;
     h1 {
         margin: rem(20);
         font-size: rem(40);
@@ -68,18 +69,191 @@
         align-items: center;
     }
 }
+
 .form {
+    background: #272727;
+    &__warn {
+        font-size: rem(20);
+        color: palevioletred;
+    }
     &__item {
         margin: rem(20) 0;
     }
-    &__input {
-        padding: 0 rem(20);
+    &__select {
+        // padding: rem(15) rem(20);
+        border: 4px solid black;
         height: rem(50);
-        width: rem(500);
+        width: 100%;
         border-radius: rem(10);
         font-size: rem(20);
     }
+    &__input {
+        padding: rem(15) rem(20);
+        height: rem(50);
+        width: 100%;
+        border: 4px solid black;
+        border-radius: rem(10);
+        font-size: rem(20);
+        transition: all 0.3s ease 0s;
+        &:focus {
+            box-shadow: 0 0 rem(15) rgb(70, 0, 201);
+        }
+    }
+    &__label {
+        font-size: rem(20);
+        display: block;
+        margin: 0 0 rem(20) 0;
+    }
+    &__textarea {
+        padding: rem(15) rem(20);
+        width: 100%;
+        border: 4px solid black;
+        border-radius: rem(10);
+        font-size: rem(20);
+        min-height: rem(50);
+        resize: vertical;
+        transition: all 0.3s ease 0s;
+        &:focus {
+            box-shadow: 0 0 rem(15) rgb(70, 0, 201);
+        }
+    }
+    &__button {
+        width: 100%;
+        min-height: rem(50);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        font-size: rem(20);
+        letter-spacing: rem(2);
+        font-weight: 700;
+        background: rgb(52, 0, 148);
+        border-radius: rem(10);
+        box-shadow: 0 rem(5) 0 #474747;
+        margin: rem(20) 0;
+        transition: background-color 0.3s ease 0s;
+        position: relative;
+        &:hover {
+            background: rgb(70, 0, 201);
+        }
+        &:active {
+            top: rem(3);
+            background: rgb(45, 0, 128);
+            box-shadow: 0 rem(2) 0 #474747;
+        }
+    }
 }
+.options {
+    &__input {
+        display: none;
+    }
+    &__label {
+        cursor: pointer;
+        position: relative;
+        display: inline-flex;
+        font-size: rem(20);
+        margin: 0 0 rem(20) 0;
+        align-items: center;
+        &::before {
+            content: "";
+            margin: 0 rem(20) 0 0;
+            flex: 0 0 rem(30);
+            height: rem(30);
+            background-color: aliceblue;
+            border-radius: 50%;
+            align-self: flex-start;
+        }
+        &::after {
+            transition: transform 0.5s ease 0s;
+            content: "";
+            position: absolute;
+            top: rem(6);
+            left: rem(6);
+            width: rem(17);
+            height: rem(17);
+            background-color: rgb(52, 0, 148);
+            border-radius: 50%;
+            transform: scale(0);
+        }
+    }
+}
+.options__input:checked + .options__label::after {
+    transform: scale(1);
+}
+
+.file {
+    &__item {
+        position: relative;
+    }
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: rem(100);
+        height: rem(50);
+        height: 100%;
+        opacity: 0;
+        font-size: 0;
+        cursor: pointer;
+    }
+    &__button {
+        display: inline-flex;
+        min-height: rem(40);
+        border-radius: rem(10);
+        padding: 0 rem(20);
+        justify-content: center;
+        align-items: center;
+        background: rgb(52, 0, 148);
+    }
+    &__preview {
+        display: inline-block;
+        max-width: rem(100);
+        padding: rem(10);
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.checkbox {
+    &__input {
+        display: none;
+    }
+    &__label {
+        cursor: pointer;
+        font-size: rem(20);
+        position: relative;
+        display: inline-flex;
+        margin: 0 0 rem(20) 0;
+        align-items: center;
+        &::before {
+            content: "";
+            margin: 0 rem(20) 0 0;
+            flex: 0 0 rem(30);
+            height: rem(30);
+            background-color: aliceblue;
+            border-radius: rem(8);
+            align-self: flex-start;
+        }
+        &::after {
+            transition: transform 0.5s ease 0s;
+            content: "";
+            position: absolute;
+            top: rem(6);
+            left: rem(6);
+            width: rem(17);
+            height: rem(17);
+            background-color: rgb(52, 0, 148);
+            border-radius: rem(4);
+            transform: scale(0);
+        }
+    }
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+    transform: scale(1);
+}
+
 .footer {
     background: #474747;
     &__menu-row {

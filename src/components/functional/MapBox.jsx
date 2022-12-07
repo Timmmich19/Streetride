@@ -11,7 +11,7 @@ export default function MapBox() {
             />
             <Marker position={[51.505, -0.09]}>
                 <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    Ford Mustang Foundation <br /> Main office
                 </Popup>
             </Marker>
         </MapContainer>

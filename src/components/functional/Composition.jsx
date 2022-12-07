@@ -75,7 +75,8 @@ function Composition() {
     return (
         // ? Блок обернут в компонент AnimatePresence для отключения анимации при инициализации компонентов
         // ? The block is wrapped in the AnimatePresence component to disable animation during component initialization
-        <AnimatePresence initial={false}>
+        // initial={false}
+        <AnimatePresence>
             <div className="main__composition">
                 <div
                     className="main__properties">
