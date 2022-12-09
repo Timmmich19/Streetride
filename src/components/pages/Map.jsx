@@ -7,7 +7,7 @@ import '../../css/map.css'
 
 export default function Map() {
     return (
-        <div class="map-page">
+        <div className="map-page">
             <Header />
             <div className='map'>
                 <MapBox />
