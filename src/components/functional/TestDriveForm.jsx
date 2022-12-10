@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from "axios"
 import FormInput from '../UI/FormInput'
 import FormNumberInput from '../UI/FormNumberInput'
 import FormSelect from '../UI/FormSelect'
@@ -10,7 +11,7 @@ export default function TestDriveForm() {
         register,
         formState: { errors },
         handleSubmit,
-        watch
+        // watch
         // reset
     } = useForm({
         mode: 'all',
@@ -24,10 +25,13 @@ export default function TestDriveForm() {
             checkbox: true,
         },
     })
-    const watchFile = watch("files");
-    const onSubmit = (data) => {
-        console.log(data)
-
+    const onSubmit = async (data) => {
+        // console.log(data)
+        try {
+            await axios.post('http://localhost:4000/send', { text: data.name })
+        } catch (error) {
+            console.log(error)
+        }
     }
     return (
         <section className="test-drive">
@@ -87,6 +91,6 @@ export default function TestDriveForm() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
