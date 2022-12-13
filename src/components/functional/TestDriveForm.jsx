@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useState } from 'react'
 import axios from "axios"
 import FormInput from '../UI/FormInput'
 import FormNumberInput from '../UI/FormNumberInput'
@@ -7,11 +7,14 @@ import FormTextArea from '../UI/FormTextArea'
 import { useForm } from 'react-hook-form'
 
 export default function TestDriveForm() {
+    const [files, setFiles] = useState([{
+        title: "myfile"
+    }])
     const {
         register,
         formState: { errors },
         handleSubmit,
-        // watch
+        watch
         // reset
     } = useForm({
         mode: 'all',
@@ -25,8 +28,12 @@ export default function TestDriveForm() {
             checkbox: true,
         },
     })
+
+    const watchFile = watch("files");
+    watchFile && console.log(watchFile)
+
     const onSubmit = async (data) => {
-        // console.log(data)
+        console.log(data)
         try {
             await axios.post('http://localhost:4000/send', { text: data.name })
         } catch (error) {
@@ -74,7 +81,6 @@ export default function TestDriveForm() {
                                         <input {...register("files")} type="file" className='file__input' />
                                         <div className="file__button">Выбрать</div>
                                     </div>
-                                    {/* {watchFile && <div className="file__preview">{data.files[0]}</div>} */}
                                 </div>
                             </div>
                             <div className="form__item">
