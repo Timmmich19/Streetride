@@ -362,7 +362,7 @@ h6 {
 }
 .file__preview {
   display: inline-block;
-  max-width: 6.25rem;
+  max-width: 18.75rem;
   padding: 0.625rem;
 }
 .file__preview img {

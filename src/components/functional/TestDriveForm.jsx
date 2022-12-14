@@ -1,5 +1,6 @@
 import { React, useState } from 'react'
 import axios from "axios"
+// import NavButton from '../UI/NavButton'
 import FormInput from '../UI/FormInput'
 import FormNumberInput from '../UI/FormNumberInput'
 import FormSelect from '../UI/FormSelect'
@@ -7,14 +8,23 @@ import FormTextArea from '../UI/FormTextArea'
 import { useForm } from 'react-hook-form'
 
 export default function TestDriveForm() {
-    const [files, setFiles] = useState([{
-        title: "myfile"
-    }])
+    const [file, setFiles] = useState()
+
+    const fileChange = (e) => {
+        if (e.target.files[0]) {
+            const image = e.target.files[0]
+            setFiles(image)
+            console.log(URL.createObjectURL(image))
+        }
+    }
+
+
+
     const {
         register,
         formState: { errors },
         handleSubmit,
-        watch
+        // watch
         // reset
     } = useForm({
         mode: 'all',
@@ -29,13 +39,12 @@ export default function TestDriveForm() {
         },
     })
 
-    const watchFile = watch("files");
-    watchFile && console.log(watchFile)
+
 
     const onSubmit = async (data) => {
         console.log(data)
         try {
-            await axios.post('http://localhost:4000/send', { text: data.name })
+            await axios.post('http://localhost:4000/send', { mail: data.mail, name: data.name, age: data.age, text: data.message })
         } catch (error) {
             console.log(error)
         }
@@ -78,9 +87,11 @@ export default function TestDriveForm() {
                                 <div className="form__label"><span>Прикрепите фото водительских прав при пункте (Вести лично) </span></div>
                                 <div className="file">
                                     <div className="file__item">
-                                        <input {...register("files")} type="file" className='file__input' />
+                                        <input {...register("files")} onChange={fileChange} type="file" className='file__input' />
                                         <div className="file__button">Выбрать</div>
                                     </div>
+                                    {/* <NavButton>Превью</NavButton> */}
+                                    {file && <img className='file__preview' src={URL.createObjectURL(file)} alt='Превью'></img>}
                                 </div>
                             </div>
                             <div className="form__item">
@@ -96,7 +107,7 @@ export default function TestDriveForm() {
                         </form>
                     </div>
                 </div>
-            </div>
+            </div >
         </section >
     )
 }

@@ -7,7 +7,7 @@ function Header() {
             <div className="header__container container">
                 <div className="header__menu menu">
                     <IconButton href="/" value="/icons/SRlogo.svg" />
-                    <IconButton href="/gallery" value="/icons/circle.svg" />
+                    <IconButton href="/gallery" value="/icons/camera.svg" />
                     <IconButton href="/map" value="/icons/map-pin.svg" />
                     <Search />
                     <IconButton href="/user" value="/icons/user.svg" />

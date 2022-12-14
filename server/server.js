@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.post("/send", cors(), async (req, res) => {
-    let { text } = req.body
+    let { mail, name, age, text } = req.body
     const transport = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
         port: process.env.MAIL_PORT,
@@ -25,8 +25,8 @@ app.post("/send", cors(), async (req, res) => {
 
     await transport.sendMail({
         from: process.env.MAIL_FROM,
-        to: "t.akhmatovya@yandex.ru",
-        subject: "Test",
+        to: mail,
+        subject: "TestDrive ",
         html: `<div className = "email" style ="
         border: 2px solid black;
         padding: 20px;
@@ -35,8 +35,10 @@ app.post("/send", cors(), async (req, res) => {
         font-size: 30px;
         ">
         <h1>Here is yor info</h1>
-        <p>${text}</p>
-        <p>All the best, Timur</p> </div>`
+        <p>Your name : ${name}</p>
+        <p>Your age : ${age}</p>
+        <p>Your message : ${text}</p>
+        <p>All the best, StreetRide</p> </div>`
     })
 
 })
